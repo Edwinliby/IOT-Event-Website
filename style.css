@@ -1,0 +1,11 @@
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: orange;
+}
+
+main {
+    height: 100vh;
+}

@@ -1,0 +1,168 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0, 0.9);
+    color: rgb(255, 255, 255);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Raleway', sans-serif;
+    z-index: 1;
+    margin: 1rem;
+    border-radius: 5rem;
+}
+
+.logo {
+    position: absolute;
+    left: 1em;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
+}
+
+.O {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    color: orange;
+    animation: blinking 2s infinite;
+    filter: drop-shadow(0px 0px 5px orange);
+}
+
+@keyframes blinking {
+    50% {
+        color: transparent;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    100% {
+        color: orange;
+    }
+}
+
+.nav-links {
+    position: absolute;
+    right: 2em;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-links li {
+    padding: 1rem;
+}
+
+.ticket {
+    background-color: orange;
+    border-radius: 10px;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
+}
+
+.ticket:hover {
+    box-shadow: 5px 5px gray;
+    color: gray;
+    font-weight: 900;
+}
+
+.nav-links .links {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.nav-links .links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    transition: width 0.3s;
+}
+
+.nav-links .links:hover::after {
+    width: 50%;
+}
+
+.burger {
+    display: none;
+    position: absolute;
+    right: 1em;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px;
+}
+
+@media screen and (max-width:768px) {
+    .burger {
+        display: block;
+    }
+
+    body {
+        overflow-y: hidden;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 12vh;
+        width: 82.5%;
+        height: 50vh;
+        background-color: rgb(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-150%);
+        transition: transform 0.5s ease-in;
+        border-radius: 2rem;
+        z-index: -1;
+    }
+
+    .ticket {
+        padding: .5rem;
+    }
+}
+
+.nav-active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
