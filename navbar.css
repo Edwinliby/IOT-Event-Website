@@ -12,7 +12,6 @@ body {
 nav {
     position: fixed;
     width: 100%;
-    overflow: hidden;
     display: flex;
     align-items: center;
     min-height: 8vh;
@@ -119,6 +118,7 @@ nav {
     height: 3px;
     background-color: white;
     margin: 6px;
+    transition: all .5S ease-in-out;
 }
 
 @media screen and (max-width:768px) {
@@ -163,4 +163,16 @@ nav {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.line .line1 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.line .line2 {
+    opacity: 0;
+}
+
+.line .line3 {
+    transform: rotate(45deg) translate(-6px, -7px);
 }

@@ -12,6 +12,8 @@ const navsilde = () => {
       else 
         link.style.animation = "navLinkFade 0.5s ease forwards .75s";
     });
+
+    burger.classList.toggle('line');
   });
 };
 
