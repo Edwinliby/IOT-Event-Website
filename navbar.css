@@ -15,8 +15,7 @@ nav {
     min-height: 8vh;
     font-family: 'Raleway', sans-serif;
     z-index: 1;
-    margin: 1rem;
-    border-radius: 5rem;
+    padding: 3rem 0rem;
 }
 
 .logo {
@@ -26,6 +25,7 @@ nav {
     font-size: 2rem;
     font-weight: 900;
     font-family: 'Raleway', sans-serif;
+    z-index: 1;
 }
 
 .O {
@@ -123,10 +123,6 @@ nav {
         display: block;
     }
 
-    body {
-        overflow-y: hidden;
-    }
-
     .nav-links li {
         opacity: 0;
     }
@@ -143,7 +139,6 @@ nav {
         transform: translateY(-150%);
         transition: transform 0.5s ease-in;
         border-radius: 2rem;
-        z-index: -1;
     }
 
     .ticket {
